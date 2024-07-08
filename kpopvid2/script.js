@@ -24,11 +24,15 @@ function loadVideo() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.getElementById('mirrorSwitch');
+    var switchInput = document.getElementById('switchInput');
     const targetElement = document.getElementById('youtubeVideo');
 
-    toggleButton.addEventListener('click', function() {
-        targetElement.classList.toggle('mirror');
+    switchInput.addEventListener('change', function() {
+        if (switchInput.checked) {
+            targetElement.classList.add('mirror');
+        } else {
+            targetElement.classList.remove('mirror');
+        }
     });
 });
 
