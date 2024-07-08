@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <link rel = "stylesheet" href = "style.css"/>
+    <link rel = "stylesheet" href = "switches.css"/>
+
+</head>
+<body>
+    <div class = "wrap">
+        <header class = "header"></header>
+
+        <div class="main main-left">
+            <div id="videoContainer">
+                <iframe id="youtubeVideo" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <div class="main main-center">
+            <div class = "settingsText"> 
+                Mirror</br>Loop</br>Trim</br>Speed
+            </div>
+        </div>
+
+        <div class="main main-right">
+            <label class="switch switch-pink">
+                <input type="checkbox" class="switch-input"> <!-- put "checked" before the > if you want this to be on by default -->
+                <span class="switch-label" id = "mirrorSwitch" data-on="On" data-off="Off"></span>
+                <span class="switch-handle"></span>
+              </label>
+        
+            <label class="switch switch-aqua">
+              <input type="checkbox" class="switch-input">
+              <span class="switch-label" data-on="On" data-off="Off"></span>
+              <span class="switch-handle"></span>
+            </label>
+        </div>
+        
+        <div class="bottom">
+            <div id="fs" class="fsButtonContainer">
+                <button onclick="toggleFullscreen()" id = "fsButton">Toggle Fullscreen</button>
+            </div>
+
+            <div id = "mp4Instructions">
+                Video unavailable? Try an mp4 file
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer>gjenkn9 2024</footer>
+
+</body>
+</html>
