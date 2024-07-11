@@ -43,8 +43,41 @@ body {
 }
 
 .main-right{
-    height: 75vh;
-    background-color: rgb(255, 255, 255);
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+}
+
+.top-switch {
+    position: absolute;
+    top: 50%; /* Start from the middle of the container */
+    transform: translateY(-50%); /* Center it vertically */
+    margin-top: -150px; /* Move it 40 pixels above the center */
+}
+
+.bottom-switch {
+    position: absolute;
+    top: 50%; /* Start from the middle of the container */
+    transform: translateY(-50%); /* Center it vertically */
+    margin-top: +80px; /* Move it 40 pixels above the center */
+}
+
+#timestampFormContainer {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    margin-top: -15px;
+    max-width: 250px;
+    background-color: #ffffff;
+}
+
+
+input[type="text"] {
+    margin: 0;
+}
+
+input[type="text"] {
+    width: 30px; /* Adjust width as needed */
 }
 
 .bottom {
@@ -106,9 +139,10 @@ body {
     padding-top: 0px; /* Adjust padding or margin to move the text down */
 }
 
-#settingsText {
-
+.settingsText {
+    font-size: 25px;
 }
+
 
 /* -------------- FOOTER -------------- */
 footer {
