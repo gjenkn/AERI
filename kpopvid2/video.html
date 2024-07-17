@@ -14,7 +14,7 @@
 
         <div class="main main-left">
             <div id="videoContainer">
-                <iframe id="youtubeVideo" frameborder="0"></iframe>
+                <div id="player"></div>
             </div>
         </div>
 
@@ -26,14 +26,15 @@
         
         <div class="main main-right">
             <label class="switch switch-pink top-switch">
-                <input type="checkbox" class="switch-input" id="switchInput"> <!-- put "checked" before the > if you want this to be on by default -->
+                <input type="checkbox" class="switch-input" id="mirrorSwitch"> <!-- put "checked" before the > if you want this to be on by default -->
                 <span class="switch-label" id = "mirrorSwitch" data-on="On" data-off="Off"></span>
                 <span class="switch-handle"></span>
             </label>
+
             <label class="switch switch-aqua bottom-switch">
-            <input type="checkbox" class="switch-input">
-            <span class="switch-label" data-on="On" data-off="Off"></span>
-            <span class="switch-handle"></span>
+                <input type="checkbox" class="switch-input" id="loopSwitch">
+                <span class="switch-label" data-on="On" data-off="Off"></span>
+                <span class="switch-handle"></span>
             </label>
 
             <div id="timestampFormContainer">
@@ -48,7 +49,7 @@
                     :
                     <input type="text" id="endSeconds" pattern="[0-9]*" inputmode="numeric" maxlength="2" placeholder="SS" required>
                     <br>
-                    <button type="button" onclick="getAndLoadVideo()">Trim Video</button>
+                    <button type="button" id="trimButton" onclick="getAndLoadVideo()">Trim Video</button>
                 </form>
             </div>
         </div>
@@ -65,6 +66,7 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <footer>gjenkn9 2024</footer>
 
 </body>

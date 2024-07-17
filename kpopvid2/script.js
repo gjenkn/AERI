@@ -1,14 +1,24 @@
-// Load the video when the video.html page is loaded
-if (window.location.pathname.endsWith('video.html')) {
-    window.onload = loadVideo;
-}
+    // create youtube player
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: getQueryParam('videoId'),
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+    }
 
-function goToVideoPage() {
-    const youtubeLink = document.getElementById('youtubeLink').value;
-    const videoId = youtubeLink.split('v=')[1];
-    const videoPageUrl = `video.html?videoId=${videoId}`;
-    window.location.href = videoPageUrl;
-}
+    // when video ends
+    function onPlayerStateChange(event) {    
+        var loopSwitch = document.getElementById('loopSwitch');
+    
+        if(event.data === 0 && loopSwitch.checked) {    
+            trimButton.click();
+        }
+    }
 
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -36,13 +46,17 @@ function getAndLoadVideo() {
     const b = endMinutes * 60 + endSeconds;
     console.log(a + " " + b);
 
-    // Call loadVideo with the timestamps entered by the user
-    loadVideo(a, b);
+    player.loadVideoById({
+        'videoId': getQueryParam('videoId'),
+        'startSeconds': a,
+        'endSeconds': b
+    });
+
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     var switchInput = document.getElementById('switchInput');
-    const targetElement = document.getElementById('youtubeVideo');
+    const targetElement = document.getElementById('player');
 
     switchInput.addEventListener('change', function() {
         if (switchInput.checked) {
@@ -53,8 +67,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var mirrorSwitch = document.getElementById('mirrorSwitch');
+    const targetElement = document.getElementById('player');
+
+    mirrorSwitch.addEventListener('change', function() {
+        if (mirrorSwitch.checked) {
+            targetElement.classList.add('mirror');
+        } else {
+            targetElement.classList.remove('mirror');
+        }
+    });
+});
+
+
+
 function toggleFullscreen() {
-    var container = document.getElementById('youtubeVideo');
+    var container = document.getElementById('player');
     var button = document.getElementById('fs');
     container.classList.toggle('fullscreen');
     button.classList.toggle('moveButton');
