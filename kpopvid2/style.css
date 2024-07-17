@@ -22,71 +22,69 @@ body {
 }
 
 .header {
-    height: 50px;
+    height: 5vh;
     background-color: rgb(255, 255, 255);
 }
 
 .main-left {
     display: flex;
-    height: 75vh;
+    height: 80vh;
     background-color: rgb(255, 255, 255);
     justify-content: center;
 }
 
 .main-center {
     display: flex;
-    height: 75vh;
     background-color: white;
     justify-content: end;
     align-items: center;
     line-height: 4;
-}
-
-.main-right{
-    display: flex;
-    background-color: white;
-    flex-direction: column;
-}
-
-.top-switch {
-    position: absolute;
-    top: 50%; /* Start from the middle of the container */
-    transform: translateY(-50%); /* Center it vertically */
-    margin-top: -150px; /* Move it 40 pixels above the center */
-}
-
-.bottom-switch {
-    position: absolute;
-    top: 50%; /* Start from the middle of the container */
-    transform: translateY(-50%); /* Center it vertically */
-    margin-top: +80px; /* Move it 40 pixels above the center */
-}
-
-#timestampFormContainer {
-    position: absolute;
-    top: 50%; 
-    transform: translateY(-50%);
-    margin-top: -15px;
-    max-width: 250px;
-    background-color: #ffffff;
-}
-
-
-input[type="text"] {
-    margin: 0;
-}
-
-input[type="text"] {
-    width: 30px; /* Adjust width as needed */
+    height: 80vh;
 }
 
 .bottom {
-    height: 60px;
+    height: 7vh;
     background-color: rgb(255, 255, 255);
 }
 
+.main-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: white;
+    flex-direction: column;
+    
+}
 
-@media all and (min-width: 600px) {
+#top-switchContainer {
+    margin-top: -20px;
+    height: 100px;
+}
+
+#bottom-switchContainer {
+    height: 100px;
+}
+
+#timestampFormContainer {
+    height: 100px;
+}
+
+#speedContainer {
+    height: 0px;
+}
+
+input[type="text"] {
+    margin: 0;
+    width: 25px; /* Adjust width as needed */
+}
+
+input::placeholder {
+    font-size: 0.9em; /* Adjust the size as needed */
+}
+
+@media all and (min-width: 80px) {
     .main {
         flex: 1;
     }
@@ -116,12 +114,12 @@ input[type="text"] {
 }
 
 .moveButton {
-    position: relative;
+    position: fixed;
     width: 106px;
     height: 25px;
-    top: 14vh;
+    bottom: 5px;
     left: 50%;
-    background-color: rgb(121, 255, 201), !important;
+    transform: translateX(-50%);
     z-index: 6;
 }
 
@@ -134,20 +132,15 @@ input[type="text"] {
     height: 100%;
 }
 
-#fullscreenInstructions {
-    position: absolute;
-    padding-top: 0px; /* Adjust padding or margin to move the text down */
-}
-
 .settingsText {
     font-size: 25px;
 }
-
 
 /* -------------- FOOTER -------------- */
 footer {
     position: fixed;
     font-size: 15px;
+    height: 3vh;
     color: white;
     background: rgb(179, 179, 179);
     padding: 5px 10px;

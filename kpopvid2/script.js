@@ -20,6 +20,14 @@
         }
     }
 
+    function goToVideoPage() {
+        const youtubeLink = document.getElementById('youtubeLink').value;
+        const videoId = youtubeLink.split('v=')[1];
+        const videoPageUrl = `video.html?videoId=${videoId}`;
+        window.location.href = videoPageUrl;
+    }
+    
+
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -79,8 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
 
 function toggleFullscreen() {
     var container = document.getElementById('player');

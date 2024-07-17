@@ -10,7 +10,11 @@
 </head>
 <body>
     <div class = "wrap">
-        <header class = "header"></header>
+        <header class = "header">
+            <div class = "homeContainer">
+                Return to Homepage
+            </div>
+        </header>
 
         <div class="main main-left">
             <div id="videoContainer">
@@ -25,32 +29,40 @@
         </div>
         
         <div class="main main-right">
-            <label class="switch switch-pink top-switch">
-                <input type="checkbox" class="switch-input" id="mirrorSwitch"> <!-- put "checked" before the > if you want this to be on by default -->
-                <span class="switch-label" id = "mirrorSwitch" data-on="On" data-off="Off"></span>
-                <span class="switch-handle"></span>
-            </label>
+            <div id="top-switchContainer">
+                <label class="switch switch-pink top-switch">
+                    <input type="checkbox" class="switch-input" id="mirrorSwitch"> <!-- put "checked" before the > if you want this to be on by default -->
+                    <span class="switch-label" id = "mirrorSwitch" data-on="On" data-off="Off"></span>
+                    <span class="switch-handle"></span>
+                </label>
+            </div>
 
-            <label class="switch switch-aqua bottom-switch">
-                <input type="checkbox" class="switch-input" id="loopSwitch">
-                <span class="switch-label" data-on="On" data-off="Off"></span>
-                <span class="switch-handle"></span>
-            </label>
+            <div id="bottom-switchContainer">
+                <label class="switch switch-aqua bottom-switch">
+                    <input type="checkbox" class="switch-input" id="loopSwitch">
+                    <span class="switch-label" data-on="On" data-off="Off"></span>
+                    <span class="switch-handle"></span>
+                </label>
+            </div>
 
             <div id="timestampFormContainer">
                 <form id="timestampForm">
-                    <label for="startMinutes">Start Time:</label>
+                    <label for="startMinutes">Start:</label>
                     <input type="text" id="startMinutes" pattern="[0-9]*" inputmode="numeric" maxlength="2" placeholder="MM" required>
                     :
                     <input type="text" id="startSeconds" pattern="[0-9]*" inputmode="numeric" maxlength="2" placeholder="SS" required>
                     <br>
-                    <label for="endMinutes">End Time:</label>
+                    <label for="endMinutes">End:</label>
                     <input type="text" id="endMinutes" pattern="[0-9]*" inputmode="numeric" maxlength="2" placeholder="MM" required>
                     :
                     <input type="text" id="endSeconds" pattern="[0-9]*" inputmode="numeric" maxlength="2" placeholder="SS" required>
                     <br>
                     <button type="button" id="trimButton" onclick="getAndLoadVideo()">Trim Video</button>
                 </form>
+            </div>
+            
+            <div id = "speedContainer">
+                insert speed here
             </div>
         </div>
 
