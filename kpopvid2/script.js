@@ -63,24 +63,14 @@ function getAndLoadVideo() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var switchInput = document.getElementById('switchInput');
-    const targetElement = document.getElementById('player');
-
-    switchInput.addEventListener('change', function() {
-        if (switchInput.checked) {
-            targetElement.classList.add('mirror');
-        } else {
-            targetElement.classList.remove('mirror');
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
     var mirrorSwitch = document.getElementById('mirrorSwitch');
-    const targetElement = document.getElementById('player');
+    window.addEventListener('load', function() {
+        targetElement = document.getElementById('player');
+    });
 
     mirrorSwitch.addEventListener('change', function() {
         if (mirrorSwitch.checked) {
+            console.log("hi")
             targetElement.classList.add('mirror');
         } else {
             targetElement.classList.remove('mirror');

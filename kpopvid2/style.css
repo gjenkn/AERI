@@ -22,8 +22,11 @@ body {
 }
 
 .header {
+    display: flex;
     height: 5vh;
     background-color: rgb(255, 255, 255);
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-end; /* Align items to the bottom */
 }
 
 .main-left {
@@ -134,6 +137,34 @@ input::placeholder {
 
 .settingsText {
     font-size: 25px;
+}
+
+
+
+/* -------------- NAV LINKS -------------- */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Adjust as needed: center, space-between, etc. */
+    padding: 0;
+    font-size: 20px;
+}
+
+.nav-links li {
+    margin-right: 20px; /* Adjust spacing between items */
+}
+
+.nav-links li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-links li a::after {
+    content: ' '; 
+    padding-left: 100px;
 }
 
 /* -------------- FOOTER -------------- */
