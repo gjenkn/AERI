@@ -1,4 +1,6 @@
-    // create youtube player
+let videoId;
+
+// create youtube player
     var player;
     function onYouTubePlayerAPIReady() {
         player = new YT.Player('player', {
@@ -22,11 +24,18 @@
 
     function goToVideoPage() {
         const youtubeLink = document.getElementById('youtubeLink').value;
-        const videoId = youtubeLink.split('v=')[1];
+        videoId = youtubeLink.split('v=')[1];
+        localStorage.setItem('videoId', videoId);
         const videoPageUrl = `video.html?videoId=${videoId}`;
         window.location.href = videoPageUrl;
     }
-    
+
+    function goToVideoPage2() {
+        const videoId = localStorage.getItem('videoId');
+        const videoPageUrl = `comparison.html?videoId=${videoId}`;
+        window.location.href = videoPageUrl;
+    }
+
 
 function getQueryParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
