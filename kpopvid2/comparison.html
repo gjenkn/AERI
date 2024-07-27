@@ -31,11 +31,25 @@
         </div>
 
         <div class="main main2">
-
+            Upload and Display Video
+            <input type="file" id="videoUpload" accept="video/*">
+            <video id="videoPlayer" controls>
+                <source id="videoSource" src="" type="video/mp4">
+            </video>
         </div>
         
         <div class="bottom1">
-
+            Mirror<br>
+            a
+            <div id="top-switchContainer">
+                <label class="switch switch-pink top-switch">
+                    <input type="checkbox" class="switch-input" id="mirrorSwitch"> <!-- put "checked" before the > if you want this to be on by default -->
+                    <span class="switch-label" id = "mirrorSwitch" data-on="On" data-off="Off"></span>
+                    <span class="switch-handle"></span>
+                </label>
+            </div>
+            
+            
         </div>
 
         

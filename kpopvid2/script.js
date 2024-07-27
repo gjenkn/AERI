@@ -93,3 +93,15 @@ function toggleFullscreen() {
     container.classList.toggle('fullscreen');
     button.classList.toggle('moveButton');
 }
+
+document.getElementById('videoUpload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const videoPlayer = document.getElementById('videoPlayer');
+    const videoSource = document.getElementById('videoSource');
+
+    if (file) {
+        const url = URL.createObjectURL(file);
+        videoSource.src = url;
+        videoPlayer.load();
+    }
+});

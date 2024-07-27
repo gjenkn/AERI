@@ -132,7 +132,21 @@ input::placeholder {
     display: flex;
     background-color: rgb(255, 255, 255);
     height: 65vh;
+    flex-direction: column;
+    align-items: start;
 }
+
+#videoUpload {
+    padding-bottom: 4px;
+}
+
+#videoPlayer {
+    display: block; 
+    margin-top: 0; /* Remove extra margin */
+    max-height: calc(64vh - 50px); /* Adjust based on padding and file input */
+    
+}
+
 
 .bottom1 {
     height: 15vh;
@@ -145,7 +159,6 @@ input::placeholder {
     background-color: rgb(255, 255, 255);
     flex-direction: column;
 }
-
 
 /* -------------- FULLSCREEN BUTTON -------------- */
 .moveButton {
@@ -257,3 +270,4 @@ footer {
     bottom: 0px;
     z-index: 4;
 }
+
