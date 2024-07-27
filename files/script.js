@@ -13,6 +13,7 @@ let videoId;
         });
     }
 
+    
     // when video ends
     function onPlayerStateChange(event) {    
         var loopSwitch = document.getElementById('loopSwitch');

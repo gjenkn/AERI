@@ -134,7 +134,7 @@ input::placeholder {
     height: 65vh;
     flex-direction: column;
     align-items: start;
-}
+} 
 
 #videoUpload {
     padding-bottom: 4px;
