@@ -120,7 +120,6 @@ input::placeholder {
     font-size: 25px;
 }
 
-
 /* -------------- COMPARISON PAGE -------------- */
 
 .main1 {
@@ -200,11 +199,32 @@ input::placeholder {
 
 
 /* -------------- NAV LINKS -------------- */
+.image-button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    background-color: transparent; /* Ensure transparent background */
+}
+
+.image-button img {
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.aeri{
+    margin-left: 50px;
+    width: 100px; 
+}
+
+
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: center; /* Adjust as needed: center, space-between, etc. */
     padding: 0;
+    margin-left: 150px;
     font-size: 20px;
 }
 

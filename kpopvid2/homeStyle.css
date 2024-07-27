@@ -1,22 +1,78 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.image-button {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    background-color: transparent; /* Ensure transparent background */
+}
+
+.image-button img {
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.aeri{
+    margin-left: 50px;
+    width: 100px; 
+}
+
+.header {
+    padding: 6px;
+    margin: 3px;
+    display: flex;
+    height: 5vh;
+    background-color: rgb(255, 255, 255);
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-end; /* Align items to the bottom */
+}
 .title {
-    padding-top: 15vh;
+    padding-top: 25vh;
     text-align: center;
     font-weight: bold;
     font-size: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 150px;
+    padding: 0;
+    font-size: 20px;
 }
 
 .linkBox{
     padding-top: 2vh;
     text-align: center;
 }
+.nav-links li {
+    margin-right: 20px; /* Adjust spacing between items */
+}
 
+.nav-links li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-links li a::after {
+    content: ' '; 
+    padding-left: 100px;
+}
 
 /* -------------- FOOTER -------------- */
 
