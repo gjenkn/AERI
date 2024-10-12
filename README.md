@@ -1,6 +1,8 @@
 Try my site here!
 https://gjenkn-aeri.netlify.app/
 
+*note - some Youtube videos can't be embeded on an external site like mine. If you're having trouble finding a working video, try this as an example - https://www.youtube.com/watch?v=mcDLVzATOnY
+
 How to use:
 
 ✔️ Enter a Youtube link for a dance you want to learn
