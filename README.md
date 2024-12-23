@@ -1,7 +1,7 @@
 Try my site here!
 https://gjenkn-aeri.netlify.app/
 
-*note - some Youtube videos can't be embeded on an external site like mine. If you're having trouble finding a working video, try this as an example - https://www.youtube.com/watch?v=mcDLVzATOnY
+Try this video as an example - https://www.youtube.com/watch?v=mcDLVzATOnY
 
 How to use:
 
@@ -14,7 +14,7 @@ How to use:
 
 What's next:
 
-⭐ Add the option to upload MP4 files to learn from, for when Youtube links don't work
+⭐ Add the option to upload MP4 files to learn from
 
 ⭐ Improve the Comparison Tool to start both videos at the same time
 
